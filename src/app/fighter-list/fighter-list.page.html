@@ -1,0 +1,23 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      All fighters
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">All fighters</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div class="boxes">
+    <app-fighter *ngFor="let fighter of fighters; let i = index" [fighterFullName]="fighter.fullName"
+      [fighterAge]="fighter.age" [fighterPicture]="fighter.picture" [fighterWeightclass]="fighter.weightclass"
+      [fighterRecord]="fighter.record" [fighterCountry]="fighter.country" [id]="fighter.id">
+    </app-fighter>
+  </div>
+
+</ion-content>

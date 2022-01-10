@@ -1,0 +1,23 @@
+
+<div class="box">
+  <div class="weightClass">
+    <p>{{fighterWeightclass}}</p>
+  </div>
+  <img [src]='fighterPicture' alt="">
+  <div class="action-buttons">
+    <a [routerLink]="['/edit', id]" class="btn edit">
+      <img src="../../assets/icons-edit.png" alt="">
+    </a>
+    <button class="btn delete" (click)="delete()">
+      <img src="../../assets/icons-delete.png" alt="">
+    </button>
+  </div>
+  <div class="info">
+    <div class="content">
+      <h2 class="name">{{fighterFullName}} </h2>
+      <p class="record"> Age : {{fighterAge}}</p>
+      <p class="record">{{fighterRecord}}</p>
+      <p class="country">{{fighterCountry}}</p>
+    </div>
+  </div>
+</div>
