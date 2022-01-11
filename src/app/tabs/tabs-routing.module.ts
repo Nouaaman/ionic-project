@@ -12,12 +12,12 @@ const routes: Routes = [
         loadChildren: () => import('../fighter-list/fighter-list.module').then(m => m.FighterListPageModule)
       },
       {
-        path: 'tab2',
-        loadChildren: () => import('../tab2/tab2.module').then(m => m.Tab2PageModule)
+        path: 'add',
+        loadChildren: () => import('../fighter-add/fighter-add.module').then(m => m.FighterAddPageModule)
       },
       {
-        path: 'tab3',
-        loadChildren: () => import('../tab3/tab3.module').then(m => m.Tab3PageModule)
+        path: 'about',
+        loadChildren: () => import('../about/about.module').then(m => m.AboutPageModule)
       },
       {
         path: '',

@@ -1,0 +1,65 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Add
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="content">
+
+    <form>
+  
+      <ion-item lines="full">
+        <ion-label position="floating">Full Name</ion-label>
+        <ion-input  type="text" [(ngModel)]="fighter.fullName"   name="fullName"></ion-input>
+      </ion-item>
+  
+      <ion-item lines="full">
+        <ion-label position="floating">Age</ion-label>
+        <ion-input  type="number" [(ngModel)]="fighter.age"   name="age"></ion-input>
+      </ion-item>
+
+  
+      <ion-item lines="full">
+        <ion-label position="floating">Weightclass</ion-label>
+        <ion-select interface="popover" [(ngModel)]="fighter.weightclass" name="weightclass">
+          <ion-select-option value="Heavyweight">Heavyweight - No weight limit</ion-select-option>
+          <ion-select-option value="Light Heavyweight">Light Heavyweight &lt; 95 kg</ion-select-option>
+          <ion-select-option value="Middleweight">Middleweight &lt; 84 kg</ion-select-option>
+          <ion-select-option value="Welterweight">Welterweight &lt; 77 kg</ion-select-option>
+          <ion-select-option value="Lightweight">Sega Lightweight &lt; 70 kg</ion-select-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-item lines="full">
+        <ion-label position="floating">Record</ion-label>
+        <ion-input  type="text" [(ngModel)]="fighter.record" placeholder="ex: 60-10-0 (20 KO)"  name="record"></ion-input>
+      </ion-item>
+
+      <ion-item lines="full">
+        <ion-label position="floating">Country</ion-label>
+        <ion-input  type="text" [(ngModel)]="fighter.country"  name="country"></ion-input>
+      </ion-item>
+  
+      <ion-item lines="full">
+        <ion-label position="floating">Picture link</ion-label>
+        <ion-input  type="text" [(ngModel)]="fighter.picture"  name="image"></ion-input>
+      </ion-item>
+
+      <ion-row>
+        <ion-col>
+          
+            <img src="../../assets/icons-add-.png" (click)="add()" alt="" srcset="">
+        
+        </ion-col>
+      </ion-row>
+
+      <div class="row mb-4 change" *ngIf="added">
+        <div class="col-12 text-success">
+          Added successfully.
+        </div>
+      </div>
+    </form>
+  
+</ion-content>

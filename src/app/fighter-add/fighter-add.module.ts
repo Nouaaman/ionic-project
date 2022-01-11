@@ -3,18 +3,18 @@ import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { Tab2Page } from './tab2.page';
+import { FighterAddPage } from './fighter-add.page';
 
 
-import { Tab2PageRoutingModule } from './tab2-routing.module';
+import { FighterAddPageRoutingModule } from './fighter-add-routing.module';
 
 @NgModule({
   imports: [
     IonicModule,
     CommonModule,
     FormsModule,
-    Tab2PageRoutingModule
+    FighterAddPageRoutingModule
   ],
-  declarations: [Tab2Page]
+  declarations: [FighterAddPage]
 })
-export class Tab2PageModule {}
+export class FighterAddPageModule {}
