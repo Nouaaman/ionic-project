@@ -5,9 +5,12 @@
   </div>
   <img [src]='fighterPicture' alt="">
   <div class="action-buttons">
-    <a [routerLink]="['/edit', id]" class="btn edit">
+    <!-- <a [routerLink]="['/edit', id]" class="btn edit">
+     
+    </a> -->
+    <button class="btn edit" (click)="initModal()">
       <img src="../../assets/icons-edit.png" alt="">
-    </a>
+    </button>
     <button class="btn delete" (click)="delete()">
       <img src="../../assets/icons-delete.png" alt="">
     </button>
