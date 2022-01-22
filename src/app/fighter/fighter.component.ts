@@ -2,6 +2,8 @@ import { Component, Input, OnInit } from '@angular/core';
 import { FighterService } from '../services/fighter/fighter.service';
 import { FighterEditPage } from '../fighter-edit/fighter-edit.page';
 import { ModalController } from '@ionic/angular';
+import { AppLauncher } from '@capacitor/app-launcher';
+
 @Component({
   selector: 'app-fighter',
   templateUrl: './fighter.component.html',
@@ -37,16 +39,13 @@ export class FighterComponent implements OnInit {
         id: this.id
       }
     });
-
-
-    // modal.onDidDismiss().then((modalDataResponse) => {
-    //   if (modalDataResponse !== null) {
-    //     console.log('Modal Sent Data : ' + modalDataResponse.data);
-    //   }
-    // });
-
     return await modal.present();
   }
-}
+
+  async openYoutube() {
+    window.open('https://www.youtube.com/results?search_query=' + this.fighterFullName, '_system');
+  }
+};
+
 
 

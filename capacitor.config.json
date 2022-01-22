@@ -1,6 +1,6 @@
 {
-	"appId": "io.ionic.starter",
-	"appName": "ionic-project",
-	"webDir": "www",
-	"bundledWebRuntime": false
+  "appId": "glory.kickboxing.project",
+  "appName": "kickboxing",
+  "webDir": "www",
+  "bundledWebRuntime": false
 }

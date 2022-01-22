@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular';
 import { FighterService } from '../services/fighter/fighter.service';
+import { Toast } from '@capacitor/toast';
 
 @Component({
   selector: 'app-fighter-edit',
@@ -29,9 +30,16 @@ export class FighterEditPage implements OnInit {
     await this.modalCtr.dismiss();
   }
 
+   showHelloToast = async () => {
+    await Toast.show({
+      text: 'Hello!',
+    });
+  };
+
   edit() {
     this.Fighter.update(this.fighter).subscribe(() => {
       this.change = true;
+     this.showHelloToast();
       setTimeout(() => {
         this.change = false;
       }, 3000);
