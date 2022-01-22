@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>native</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-grid>
+    <ion-row class="ion-justify-content-center ion-align-items-center  ion-margin">
+      <h3 >Take a photo or upload image</h3>
+    </ion-row>
+   
+    <ion-row class="ion-justify-content-center ion-align-items-center  ion-margin">
+      <ion-button (click) = 'takePicture()' class="ion-margin">
+        <ion-icon name="camera-outline" size="large"></ion-icon>
+      </ion-button>
+    </ion-row>
+    <ion-row  class="ion-justify-content-center ion-align-items-center  ion-margin">
+      <img [src]="imageSrc"    [ngStyle]="{'border': imageSrc ? '2px solid #fff' : 'none'}">
+    </ion-row>
+  </ion-grid>
+
+</ion-content>

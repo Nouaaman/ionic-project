@@ -9,6 +9,10 @@ const routes: Routes = [
   {
     path: 'fighter-edit',
     loadChildren: () => import('./fighter-edit/fighter-edit.module').then( m => m.FighterEditPageModule)
+  },
+  {
+    path: 'native',
+    loadChildren: () => import('./native/native.module').then( m => m.NativePageModule)
   }
 ];
 @NgModule({

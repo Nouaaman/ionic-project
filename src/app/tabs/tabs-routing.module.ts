@@ -20,6 +20,10 @@ const routes: Routes = [
         loadChildren: () => import('../about/about.module').then(m => m.AboutPageModule)
       },
       {
+        path: 'native',
+        loadChildren: () => import('../native/native.module').then(m => m.NativePageModule)
+      },
+      {
         path: '',
         redirectTo: '/tabs/fighters',
         pathMatch: 'full'
