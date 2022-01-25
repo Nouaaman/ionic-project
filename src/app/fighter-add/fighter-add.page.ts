@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Toast } from '@capacitor/toast';
 import { Fighter } from '../models/fighter.model';
 import { FighterService } from '../services/fighter/fighter.service';
 
@@ -9,20 +10,25 @@ import { FighterService } from '../services/fighter/fighter.service';
 })
 export class FighterAddPage implements OnInit {
   public fighter!: Fighter;
-  added = false;
-  // eslint-disable-next-line @typescript-eslint/naming-convention
-  constructor(private Fighter: FighterService) { }
+
+  constructor(
+    // eslint-disable-next-line @typescript-eslint/naming-convention
+    private Fighter: FighterService
+  ) { }
   ngOnInit(): void {
     this.fighter = new Fighter();
   }
 
+  showToast = async () => {
+    await Toast.show({
+      text: 'Added successfully.',
+    });
+  };
+
   add() {
     this.Fighter.saveNewFighter(this.fighter).subscribe(() => {
       this.fighter = new Fighter();
-      this.added = true;
-      setTimeout(() => {
-        this.added = false;
-      }, 5000);
+      this.showToast();
     });
 
   }

@@ -79,15 +79,16 @@ input {
     }
 
     .btn {
-        width: 30px;
-        height: 30px;
-        padding: 4px;
+        width: 32px;
+        height: 32px;
+        padding: 6px;
         border-radius: 50%;
         // border: 2px solid #fff;
         display: flex;
         justify-content: center;
         align-items: center;
         transition: background-color .3s ease-in-out;
+        background-color: #343A4F;
     }
 
     .btn.delete:hover {

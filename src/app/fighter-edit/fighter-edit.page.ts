@@ -11,7 +11,6 @@ import { Toast } from '@capacitor/toast';
 export class FighterEditPage implements OnInit {
   @Input() id: string;
   fighter: any = null;
-  change = false;
 
   constructor(
     // eslint-disable-next-line @typescript-eslint/naming-convention
@@ -30,19 +29,16 @@ export class FighterEditPage implements OnInit {
     await this.modalCtr.dismiss();
   }
 
-   showHelloToast = async () => {
+  showToast = async () => {
     await Toast.show({
-      text: 'Hello!',
+      text: 'The changes have been saved.',
     });
   };
 
   edit() {
     this.Fighter.update(this.fighter).subscribe(() => {
-      this.change = true;
-     this.showHelloToast();
-      setTimeout(() => {
-        this.change = false;
-      }, 3000);
+      this.showToast();
+
     });
   }
 
